@@ -33,3 +33,6 @@ async def read_item(item_id: int, q: str = None, api_key: str = Depends(get_api_
 @app.post("/items/")
 async def create_item(item: Item, api_key: str = Depends(get_api_key)):
    return {"name": item.name, "price": item.price}
+
+
+
